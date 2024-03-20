@@ -1,134 +1,173 @@
-# Tipo de dados
+# Tipos de dados
 
-# Númerico
+# Numérico
 
 # int
+
 idade = 10
 
 # float
-altura = 1.65
 
-# Booleano
-# True, False
-verdade = True
-mentira = False
+altura = 1.85
+
+# boolean
+
 ligado = True
+
 frete_gratis = False
 
-# str = string
-# sequencia de caracteres
-# literal de string em python
-nome = "josé"
-nome = 'josé'
+# str
 
-# char
-letra = "a"
+nome = "José"
+
+letra = 'a'
+
+# multilinhas
 
 frase = """
-Ola Pessoal
-Teste
-Teste
+
+Hello,
+
+world
+
 """
 
 # Interpolação de string
-nome = "Sonia"
-idade = 23
 
-# f - string
-mensagem = f"Bom dia {nome}, Você tem {idade} anos!"
+nome = "Latorre"
 
-nome = "Silvio Santos"
-print(nome [2])
-print(nome [-5])
-print(nome [0:4])
+idade = 35
 
-# str são objetos
+# f-string
+
+mensagem = f"Bom dia, {nome}. Você tem {idade} anos."
+
+print(nome[2])
+
+print(nome[-1])
+
+print(nome[0:5])
+
+# strings são objetos
+
 # métodos
+
 print(nome.upper())
-print(nome)
 
 # list
-# lista de valores
-# podem conter valores de tipos diferentes
-# podem ser alterada (adicionar, remover)
-habilidades = ["java", "html", "css"]
+
+# pode conter valores de tipos diferentes
+
+habilidades = ["Java", "HTML", "CSS", "SQL", 77]
+
 print(habilidades[0])
 
-habilidades[0] = "javascript"
-print(habilidades)
+habilidades[0] = "JavaScript"
 
-habilidades.append("python")
+print(habilidades[0])
+
+# adicionar no final da lista
+
+habilidades.append("Python")
+
 print(habilidades)
 
 # adicionar em uma posição
-habilidades.insert(0, "kotlin")
+
+habilidades.insert(0, "Kotlin")
+
 print(habilidades)
 
-# remove, sort, clear, copy ...
+# remover um elemento
 
-for habilidade in habilidades:
-    print(habilidade)
+habilidades.remove(77)
 
-# tuple
-# lista de valores
-# não pode alterar os valores
+# remove, sort, clear, copy...
+
+# tupla
+
+# lista de valores sem alteração
+
 opcoes = ("sim", "não", "talvez")
-racas_rpg = ("anao", "humano", "elfo")
 
-print(opcoes[1])
+racas_rpg = ("anão", "humano", "elfo", "draconato")
 
-# função que retorna estatisticas
-# sobre as notas de um aluno/aluna
-# media, menor nota, maior nota
-# entrada: n1, n2, n3 ou notas(list)
-# saida: media, menor nota, maior nota
-def estatistica_nota(notas):
-    media = sum(notas)/len(notas)
+print(racas_rpg[3])
+
+# função que retorna estatísticas sobre as notas de um aluno
+
+# saída: média, menor, maior
+
+# entrada: n1, n2, n3 ou notas (list)
+
+def estatisticas_notas(notas):
+
+    media = sum(notas) / len(notas)
+
     menor = min(notas)
+
     maior = max(notas)
+
     return media, menor, maior
 
-notas = [4, 7, 10]
-estatisticas = estatistica_nota(notas)
-print(estatisticas)
-print(type(estatisticas))
+notas = [10.0, 7.5, 6.9, 1.3]
 
-# desempacotamento de tuple
-media, menor, maior = estatisticas
+estatistica = estatisticas_notas(notas)
+
+print(estatistica)
+
+print(type(estatistica))
+
+# desempacotamento de tupla
+
+media, menor, maior = estatisticas_notas(notas)
+
 print(media, menor, maior)
 
 # set
-# conjunto de valores
+
+# conjuntos de valores
+
 # não permite valores duplicados
+
 # não é indexado
-habilidades = {"java", "python", "css"}
-habilidades.add("java")
+
+habilidades = {"Java", "Python", "C#"}
+
+habilidades.add("Java")
+
 print(habilidades)
 
+for habilidade in habilidades:
+
+    print(habilidade)
+
 # dict
-# dicionario
-# palavra
-# palavra => definição
-# chave => valor
-# key => value
-nome = "Silvio Santos"
-casado = True
-idade= 120
+
+# palavra: definição
+
+# key: value
 
 pessoa = {
-    "nome": "Silvio Santos",
+
+    "nome": "Silvio",
+
+    "sobrenome": "Cruzatto",
+
+    "idade": 120,
+
     "casado": True,
-    "idade": 120
+
 }
 
-print(pessoa["casado"])
-print(pessoa["idade"])
 print(pessoa["nome"])
 
+print(pessoa["sobrenome"])
+
 pessoa["rico"] = True
+
 print(pessoa)
 
-# none
-# null
-# nada
+# None
+
 nulo = None
